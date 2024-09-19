@@ -1,4 +1,5 @@
-from binary_search import BinarySearch
+# from binary_search import BinarySearch
+from cga_binary_search import BinarySearch
 import unittest
 import json
 import time
@@ -36,7 +37,7 @@ class TestBinarySearch(unittest.TestCase):
     # Compare the resulting index with the expected index
     self.assertEqual(expected_index, index) # => 1 == 1
 
-  def test_recoursive_binary_search_with_simple_list(self):
+  def test_recursive_binary_search_with_simple_list(self):
     item, expected_index = 3, 1
     # To run recursive search for an item, 
     # we need to determine the minimum and maximum indexes of the list
@@ -98,9 +99,9 @@ class TestBinarySearch(unittest.TestCase):
     # is at the beginning of the list
     self.assertTrue(bs_time > ls_time)
 
-    # print("--- Time required to search item at the beginning ---")
-    # print("--- Linear Search %f seconds ---" % (ls_time))
-    # print("--- Binary Search %f seconds ---" % (bs_time))
+    print("--- Time required to search item at the beginning ---")
+    print("--- Linear Search %f seconds ---" % (ls_time))
+    print("--- Binary Search %f seconds ---" % (bs_time))
 
   
 if __name__ == '__main__':
